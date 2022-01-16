@@ -47,16 +47,13 @@ public class BSTMap<K extends Comparable<K>, T> implements Map<K, T> {
 		
 		if(!found)
 			return false;
-		//------------
-		
-		
-		
+
 		p.data = e;
 		
 		return true;
 	}
 
-	/*public boolean find(K key) {
+	public boolean find(K key) {
 		BSTNode<K,T> p = root , q = root;
 		if(root == null)
 			return false;
@@ -75,7 +72,8 @@ public class BSTMap<K extends Comparable<K>, T> implements Map<K, T> {
 		current = q;
 		return false;
 
-	}*/
+	}
+	
 	// Search for element with key k and returns a pair containing true and its data if it exists. If k does not exist, the method returns false and null.
 	public Pair<Boolean, T> retrieve(K k){
 		
@@ -157,6 +155,7 @@ public class BSTMap<K extends Comparable<K>, T> implements Map<K, T> {
 
 		return true;
 	}
+	
 	private BSTNode<K,T> remove_aux(K key, BSTNode<K,T> p, boolean flag) {
 		BSTNode<K,T> q, child = null;
 		if(p == null)
